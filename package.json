@@ -4,7 +4,8 @@
   "description": "Examples of GOF design patterns.",
   "type": "module",
   "scripts": {
-     "start": "npx tsx examples/run-all.ts"
+     "start": "npx tsx examples/run-all.ts",
+    "bridge": "npx tsx src/structural/bridge/index.ts"
   },
   "devDependencies": {
     "tsx": "^4.0.0",

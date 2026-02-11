@@ -1,11 +1,20 @@
-class Lighting { on = () => console.log("Світло увімкнено"); }
-class TV { play = () => console.log("Фільм запущено"); }
+// Складні підсистеми
+class Antenna { init() { console.log("Антена готова"); } }
+class Encryptor { encrypt() { console.log("Дані зашифровано"); } }
+class Transmitter { send() { console.log("Сигнал відправлено"); } }
 
-export class SmartHomeFacade {
-    constructor(private light = new Lighting(), private tv = new TV()) {}
-    public watchMovie(): void {
-        console.log("Готуємо систему до перегляду...");
-        this.light.on();
-        this.tv.play();
-    }
+// ФАСАД
+export class CommsFacade {
+  private antenna = new Antenna();
+  private encryptor = new Encryptor();
+  private transmitter = new Transmitter();
+
+  // Спрощений метод для користувача
+  public sendMessage(data: string) {
+    console.log(`--- Підготовка до відправки: ${data} ---`);
+    this.antenna.init();
+    this.encryptor.encrypt();
+    this.transmitter.send();
+    console.log("--- Готово ---");
+  }
 }
