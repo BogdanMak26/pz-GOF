@@ -5,7 +5,12 @@
   "type": "module",
   "scripts": {
      "start": "npx tsx examples/run-all.ts",
-    "bridge": "npx tsx src/structural/bridge/index.ts"
+    "bridge": "npx tsx src/structural/bridge/index.ts",
+    "strategy": "npx tsx src/behavioral/strategy/strategy.ts",
+    "adapter" : "npx tsx src/structural/adapter/adapter.ts",
+    "facade" : "npx tsx src/structural/facade/facade.ts",
+    "factory-method" :  "npx tsx src/creational/factory-method/factory-method.ts",
+    "observer" : "npx tsx src/behavioral/observer/index.ts"
   },
   "devDependencies": {
     "tsx": "^4.0.0",

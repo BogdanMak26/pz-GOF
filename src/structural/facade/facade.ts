@@ -1,10 +1,8 @@
-// Складні підсистеми
-class Antenna { init() { console.log("Антена готова"); } }
-class Encryptor { encrypt() { console.log("Дані зашифровано"); } }
-class Transmitter { send() { console.log("Сигнал відправлено"); } }
+import {Antenna} from './Antenna'
+import {Encryptor} from './Encryptor'
+import {Transmitter} from './Transmitter'
 
-// ФАСАД
-export class CommsFacade {
+class CommsFacade {
   private antenna = new Antenna();
   private encryptor = new Encryptor();
   private transmitter = new Transmitter();
@@ -18,3 +16,8 @@ export class CommsFacade {
     console.log("--- Готово ---");
   }
 }
+ console.log("\n--- Structural: Facade ---");
+ const commun = new CommsFacade();
+ commun.sendMessage("Ми перемогли !!!!!!!!!");
+
+
