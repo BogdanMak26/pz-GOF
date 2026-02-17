@@ -4,7 +4,7 @@ export class CommunicationNode {
   private observers: Observer[] = []; // Список підписаних пристроїв
   private status: string = "Очікування";
 
-  // Додати спостерігача
+
   public attach(observer: Observer): void {
     this.observers.push(observer);
     console.log("Система: Підключено новий моніторинговий пристрій.");

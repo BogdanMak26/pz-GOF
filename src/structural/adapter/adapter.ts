@@ -1,4 +1,5 @@
 import {LegacyRadioR123} from  "./LegacyRadioR123";
+import {ModernTransceiver} from "./ModernTransceiver";
 
 export class RadioAdapter implements ModernTransceiver {
   private legacyRadio: LegacyRadioR123;
